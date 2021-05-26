@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{filmeBacking.cadastroFilme}:#cad-filme.jsp" NAME="output"
+    PATH="/cad-filme.jsp" TARGET="rules:#cad-filme.jsp"
+    TITLE="#{filmeBacking.cadastroFilme}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#cad-filme.jsp" PATH="/cad-filme.jsp"
+  SHAPE="240,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#cad-filme.jsp:0" NAME="item"
+   PATH="/cad-filme.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="sair::#menu.jsp" NAME="output"
+    PATH="/menu.jsp" TARGET="rules:#menu.jsp" TITLE="sair" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#menu.jsp" PATH="/menu.jsp"
+  SHAPE="448,17,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::1" SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::1" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{filmeBacking.consultarFilme}:#list-filme.jsp" NAME="output"
+    PATH="/list-filme.jsp" TARGET="rules:#list-filme.jsp"
+    TITLE="#{filmeBacking.consultarFilme}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#list-filme.jsp" PATH="/list-filme.jsp"
+  SHAPE="240,145,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::2" SHAPE="32,273,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::2" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{funcionarioBacking.cadastroFuncionario}:#cad-funcionario.jsp"
+    NAME="output" PATH="/cad-funcionario.jsp"
+    TARGET="rules:#cad-funcionario.jsp"
+    TITLE="#{funcionarioBacking.cadastroFuncionario}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#alt-filme.jsp" PATH="/alt-filme.jsp"
+  SHAPE="240,289,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::3" SHAPE="32,465,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::3" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{funcionarioBacking.consultarFuncionario}:#list-funcionario.jsp"
+    NAME="output" PATH="/list-funcionario.jsp"
+    TARGET="rules:#list-funcionario.jsp"
+    TITLE="#{funcionarioBacking.consultarFuncionario}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#cad-funcionario.jsp"
+  PATH="/cad-funcionario.jsp" SHAPE="240,369,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#cad-funcionario.jsp:0" NAME="item"
+   PATH="/cad-funcionario.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="sair::#menu.jsp" NAME="output"
+    PATH="/menu.jsp" TARGET="rules:#menu.jsp" TITLE="sair" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::4" SHAPE="32,353,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::4" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID=":#{filmeBacking.alterar}:#alt-filme.jsp"
+    NAME="output" PATH="/alt-filme.jsp" TARGET="rules:#alt-filme.jsp"
+    TITLE="#{filmeBacking.alterar}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::5" SHAPE="32,577,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::5" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{funcionarioBacking.alterar}:#alt-funcionario.jsp"
+    NAME="output" PATH="/alt-funcionario.jsp"
+    TARGET="rules:#alt-funcionario.jsp"
+    TITLE="#{funcionarioBacking.alterar}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#alt-funcionario.jsp"
+  PATH="/alt-funcionario.jsp" SHAPE="240,593,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#list-funcionario.jsp"
+  PATH="/list-funcionario.jsp" SHAPE="240,481,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

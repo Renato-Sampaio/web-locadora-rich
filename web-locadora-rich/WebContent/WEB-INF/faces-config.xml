@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
+
+	<!-- MAPEAMENTO DOS BEANS DE CONTROLE -->
+
+	<managed-bean>
+		<managed-bean-name>filmeBacking</managed-bean-name>
+		<managed-bean-class>br.com.foursys.locadora.backingbean.FilmeBacking</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>funcionarioBacking</managed-bean-name>
+		<managed-bean-class>br.com.foursys.locadora.backingbean.FuncionarioBacking</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<!-- REGRA DE NAVEGAÇÃO DE MENU -->
+
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{filmeBacking.cadastroFilme}</from-action>
+			<to-view-id>/cad-filme.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{filmeBacking.consultarFilme}</from-action>
+			<to-view-id>/list-filme.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{funcionarioBacking.cadastroFuncionario}</from-action>
+			<to-view-id>/cad-funcionario.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{funcionarioBacking.consultarFuncionario}</from-action>
+			<to-view-id>/list-funcionario.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- REGRA DE NAVEGAÇÃO DE FILME -->
+	<navigation-rule>
+		<from-view-id>/cad-filme.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>sair</from-outcome>
+			<to-view-id>/menu.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- REGRA DE NAVEGAÇÃO DE FUNCIONARIO -->
+	<navigation-rule>
+		<from-view-id>/cad-funcionario.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>sair</from-outcome>
+			<to-view-id>/menu.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- REGRA DE NAVEGAÇÃO DE - ALTERAÇÃO DE FILME -->
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{filmeBacking.alterar}</from-action>
+			<to-view-id>/alt-filme.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- REGRA DE NAVEGAÇÃO DE - ALTERAÇÃO DE FUNCIONARIO -->
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{funcionarioBacking.alterar}</from-action>
+			<to-view-id>/alt-funcionario.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+
+
+</faces-config>
